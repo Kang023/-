@@ -8,28 +8,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #f0f2f5; }
-        /* A4 가로 사이즈 및 여백 미세 조정 */
-        .a4-landscape { width: 29.7cm; height: 21cm; padding: 1.2cm; margin: 20px auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; }
+        /* 화면 미리보기 여백을 1.5cm로 설정 */
+        .a4-landscape { width: 29.7cm; height: 21cm; padding: 1.5cm; margin: 20px auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; }
         .shipping-mark { border: 4px solid black; width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 1fr 1fr; gap: 0; }
-        /* 각 셀의 세로 여백 축소 */
-        .grid-item { border: 2px solid black; padding: 10px 16px; display: flex; flex-direction: column; justify-content: center; }
+        /* 한 페이지 인쇄를 위해 내부 여백과 폰트 크기 미세 조정 */
+        .grid-item { border: 2px solid black; padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; }
         .item-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 100%; align-items: center; }
-        /* 항목 간 세로 간격 축소 */
-        .column-group { display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+        .column-group { display: flex; flex-direction: column; justify-content: center; gap: 10px; }
         .column-group > div > span { display: block; }
         .label { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
         .content { font-size: 1.2rem; font-weight: 700; word-break: break-word; min-height: 1.5em; }
-        /* 상품 정보 폰트 크기 미세 조정 */
-        .item-details-grid .label { font-size: 1.15rem; }
-        .item-details-grid .content { font-size: 1.6rem; }
-        .content-large { font-size: 2.3rem; font-weight: 700; }
-        /* Carton No 폰트 크기 축소 */
-        .content-xl { font-size: 4rem; font-weight: 700; text-align: center; }
-        /* 수기 작성란 높이 축소 */
-        .handwriting-space { border-bottom: 2px solid black; min-height: 2.5rem; display: block; }
+        .item-details-grid .label { font-size: 1.1rem; }
+        .item-details-grid .content { font-size: 1.5rem; }
+        .content-large { font-size: 2.2rem; font-weight: 700; }
+        .content-xl { font-size: 3.8rem; font-weight: 700; text-align: center; }
+        .handwriting-space { border-bottom: 2px solid black; min-height: 2.4rem; display: block; }
         .controls { max-width: 29.7cm; margin: 20px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         select, button { font-size: 1rem; padding: 10px; border-radius: 6px; border: 1px solid #ccc; }
-        @media print { .no-print { display: none; } body { background-color: white; } .a4-landscape { margin: 0; padding: 0; box-shadow: none; } @page { size: A4 landscape; margin: 1.2cm; } }
+        
+        @media print { 
+            .no-print { display: none; } 
+            body { background-color: white; } 
+            .a4-landscape { margin: 0; padding: 0; box-shadow: none; } 
+            /* 실제 인쇄 여백을 1.5cm로 설정 */
+            @page { 
+                size: A4 landscape; 
+                margin: 1.5cm; 
+            } 
+        }
     </style>
 </head>
 <body>
