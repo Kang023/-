@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인터랙티브 쉬핑 마크 생성기</title>
+    <title>Shipping Mark Maker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -37,7 +37,7 @@
             /* 실제 인쇄 여백을 1.5cm로 설정 */
             @page { 
                 size: A4 landscape; 
-                margin: 1.5cm; 
+                margin: 3cm; 
             } 
         }
     </style>
@@ -45,11 +45,11 @@
 <body>
 
     <div class="controls no-print">
-        <label for="product-select" class="block mb-2 font-bold text-lg">상품 선택:</label>
+        <label for="product-select" class="block mb-2 font-bold text-lg">상품 선택(Choose the Item):</label>
         <div class="flex space-x-4">
             <select id="product-select" class="w-full"></select>
             <button onclick="window.print()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-colors whitespace-nowrap">
-                현재 양식 인쇄하기
+                Print the Form
             </button>
         </div>
     </div>
@@ -66,7 +66,7 @@
                     <div class="column-group">
                         <div><span class="label">사이즈(Size)</span><span class="content" id="product-size"></span></div>
                         <div><span class="label">색상(Color)</span><span class="content" id="product-color"></span></div>
-                        <div><span class="label">수량 (Q'TY)</span><div class="handwriting-space content" style="width: 50%;">&nbsp;</div></div>
+                        <div><span class="label">수량 (Q'TY/EA)</span><div class="handwriting-space content" style="width: 50%;">&nbsp;</div></div>
                     </div>
                 </div>
             </div>
@@ -154,3 +154,4 @@
     </script>
 </body>
 </html>
+
