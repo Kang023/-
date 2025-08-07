@@ -9,7 +9,7 @@
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #f0f2f5; }
         /* 화면 미리보기 여백을 1.5cm로 설정 */
-        .a4-landscape { width: 29.7cm; height: 21cm; padding: 1.5cm; margin: 20px auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; }
+        .a4-landscape { width: 26.7cm; height: 18cm; padding: 1.5cm; margin: 20px auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; }
         .shipping-mark { border: 4px solid black; width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 1fr 1fr; gap: 0; }
         /* 내부 여백 조정 */
         .grid-item { border: 2px solid black; padding: 4px 16px; display: flex; flex-direction: column; justify-content: center; }
@@ -34,10 +34,10 @@
             .no-print { display: none; } 
             body { background-color: white; } 
             .a4-landscape { margin: 0; padding: 0; box-shadow: none; } 
-            /* 실제 인쇄 여백을 1.5cm로 설정 */
+            /* 실제 인쇄 여백을 1.2cm로 설정 */
             @page { 
                 size: A4 landscape; 
-                margin: 3cm; 
+                margin: 1.2cm; 
             } 
         }
     </style>
@@ -45,7 +45,7 @@
 <body>
 
     <div class="controls no-print">
-        <label for="product-select" class="block mb-2 font-bold text-lg">상품 선택(Choose the Item):</label>
+        <label for="product-select" class="block mb-2 font-bold text-lg">(Choose the Item):</label>
         <div class="flex space-x-4">
             <select id="product-select" class="w-full"></select>
             <button onclick="window.print()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-colors whitespace-nowrap">
@@ -154,4 +154,5 @@
     </script>
 </body>
 </html>
+
 
