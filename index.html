@@ -11,18 +11,22 @@
         /* 화면 미리보기 여백을 1.5cm로 설정 */
         .a4-landscape { width: 29.7cm; height: 21cm; padding: 1.5cm; margin: 20px auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; }
         .shipping-mark { border: 4px solid black; width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: 1fr 1fr; gap: 0; }
-        /* 한 페이지 인쇄를 위해 내부 여백과 폰트 크기 미세 조정 */
-        .grid-item { border: 2px solid black; padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; }
-        .item-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 100%; align-items: center; }
-        .column-group { display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+        /* 내부 여백 조정 */
+        .grid-item { border: 2px solid black; padding: 4px 16px; display: flex; flex-direction: column; justify-content: center; }
+        /* 가독성 개선: 좌우 간격 조정 */
+        .item-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; height: 100%; align-items: center; }
+        /* 가독성 개선: 상하 간격 대폭 확대 */
+        .column-group { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
         .column-group > div > span { display: block; }
         .label { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
         .content { font-size: 1.2rem; font-weight: 700; word-break: break-word; min-height: 1.5em; }
-        .item-details-grid .label { font-size: 1.1rem; }
-        .item-details-grid .content { font-size: 1.5rem; }
-        .content-large { font-size: 2.2rem; font-weight: 700; }
-        .content-xl { font-size: 3.8rem; font-weight: 700; text-align: center; }
-        .handwriting-space { border-bottom: 2px solid black; min-height: 2.4rem; display: block; }
+        /* 가독성 개선: 상품 정보 폰트 크기 대폭 확대 */
+        .item-details-grid .label { font-size: 1.25rem; }
+        .item-details-grid .content { font-size: 1.8rem; }
+        .content-large { font-size: 2.1rem; font-weight: 700; }
+        .content-xl { font-size: 3.2rem; font-weight: 700; text-align: center; }
+        /* 가독성 개선: 수량 기입란 높이 확대 */
+        .handwriting-space { border-bottom: 2px solid black; min-height: 3rem; display: block; }
         .controls { max-width: 29.7cm; margin: 20px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         select, button { font-size: 1rem; padding: 10px; border-radius: 6px; border: 1px solid #ccc; }
         
